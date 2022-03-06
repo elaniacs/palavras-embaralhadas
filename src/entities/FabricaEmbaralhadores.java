@@ -1,5 +1,7 @@
 package entities;
 
+import interfaces.Embaralhador;
+
 public class FabricaEmbaralhadores {
 	
 	public EmbaralhadorPadrao criarEmbaralhadorPadrao() {
@@ -11,6 +13,19 @@ public class FabricaEmbaralhadores {
 		EmbaralhadorAlternativo ep = new EmbaralhadorAlternativo(); 
 		return ep;
 	}
+	
+	public Embaralhador getEmbaralhadorAleatorio()
+	{
+		int random = (int) (Math.random()*2);
+		if (random == 0) {
+			return  criarEmbaralhadorPadrao();
+		} 
+		else {
+				return criarEmbaralhadorAlternativo();
+			}
+			
+	}
+	
 
 }
 
