@@ -1,9 +1,8 @@
 package testes;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -28,7 +27,7 @@ public class Teste {
 	}
 	
 	@Test
-	public void testPermutacaoPadrão() {
+	public void testPermutacaoPadrao() {
 		Embaralhador emb = new EmbaralhadorPadrao(); 
 		assertEquals(7, emb.permutacao("ligeiro").length());
 		
